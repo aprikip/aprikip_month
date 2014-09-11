@@ -97,4 +97,5 @@ Date.new(2017, 4, 27).to_month
 # Acknowledgement
 A gem named "month", implemented by Tim Craft, already exists, here:
 https://github.com/timcraft/month .
-The #dates method is implemented after I saw Tim's month gem.
+The #dates method is implemented after I saw Tim's month gem.  Also
+http://qa.atmarkit.co.jp/q/3250 is helpful for me.
