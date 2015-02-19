@@ -11,6 +11,10 @@ module AprikipMonth
       @month=month
     end
 
+    def Month.at(count)
+      Month.new(count/12, count%12+1)
+    end
+
     def succ
       new_count=@count+1
       Month.new(new_count/12, new_count % 12+1)

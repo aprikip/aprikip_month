@@ -14,6 +14,13 @@ describe Month do
       expect{Month.new(7444,18)}.to raise_error(ArgumentError)
     end
   end
+  describe "#at" do
+    it "makes a Month object from raw integer, reversal function of #to_i" do
+      expect(Month.at(24168)).to eq(Month.new(2014,1))
+      expect(Month.at(24179)).to eq(Month.new(2014,12))
+      expect(Month.at(24180)).to eq(Month.new(2015,1))
+    end
+  end
   describe "#year" do
     it "returns year of Month object" do
       expect(Month.new(2778, 4).year).to eq(2778)
