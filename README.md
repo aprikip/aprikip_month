@@ -40,6 +40,10 @@ Attributes ```year``` and ```month``` return year and month (as a number).
 Month.new.year # => 2014
 Month.new.month # => 9
 ```
+Class method Month.at makes a Month object corresponding the argument as its @count.
+```ruby
+Month.at(24181) # => #<Month:0x007ffc3ddacd70 @count=24181, @month=2, @year=2015>
+```
 The #succ and #prev methods return the next and previous month.  #succ
 has an alias #next.
 ```ruby
