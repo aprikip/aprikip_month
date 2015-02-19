@@ -1,19 +1,37 @@
-# month
+# AprikipMonth
 
-This class manipulates a month as a unit of time, as Date do a day as a
-unit.  It may be useful when you deal with a monthly datum, like accounts.
+This gem provides a class manipulates a month as a unit of time, as Date does
+a day as a unit.  It may be useful when you deal with a monthly datum, like accounts.
+This gem also extend Date class to add a ```to_month``` method, working as its name.
 
-# Usage
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'aprikip_month'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install aprikip_month
+
+## Usage
+
 Require no other third party gems.
 ```ruby
 require "month"
 ```
-# Features
+### Features
 You can make a new Month object with year and month.
 ```ruby
 Month.new(2014, 4) # => #<Month:0x007f8a27927210 @count=24171, @month=4, @year=2014>
 ```
-Without argument, it creates a Month object of cyrrent month.
+Without argument, it creates a Month object of current month.
 ```ruby
 Month.new # => #<Month:0x007f8a27966de8 @count=24176, @month=9, @year=2014>
 ```
@@ -87,15 +105,24 @@ Month.new(2017, 4).dates
 #<Date: 2017-04-30 ((2457874j,0s,0n),+0s,2299161j)>
 ```
 
-# Addenda
+### Addenda
 This will add #to_month method to Date class.
 ```ruby
 Date.new(2017, 4, 27).to_month
 => #<Month:0x007fccd402a4d8 @count=24207, @month=4, @year=2017>
 ```
 
-# Acknowledgement
+### Acknowledgement
 A gem named "month", implemented by Tim Craft, already exists, here:
 https://github.com/timcraft/month .
 The #dates method is implemented after I saw Tim's month gem.  Also
 http://qa.atmarkit.co.jp/q/3250 is helpful for me.
+
+
+## Contributing
+
+1. Fork it ( https://github.com/[my-github-username]/aprikip_month/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
