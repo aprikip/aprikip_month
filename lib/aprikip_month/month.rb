@@ -1,6 +1,7 @@
 module AprikipMonth
   require "date"
   class Month
+    include Comparable
     attr_reader :year, :month
     AprikipMonth::Date=Date
 
@@ -9,6 +10,7 @@ module AprikipMonth
       @count=year*12+month-1
       @year=year
       @month=month
+      self.freeze
     end
 
     def Month.at(count)

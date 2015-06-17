@@ -1,0 +1,4 @@
+#Changelog
+
+## 1.0.2 (17 June 2015)
+- ```Month.initialize``` now freezes a Month object after initializing.
